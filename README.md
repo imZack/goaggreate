@@ -2,6 +2,8 @@
 
 Aggregates 2 and more apis with a configurable yaml file.
 
+![Combine 2 API endpoints](http://www.plantuml.com/plantuml/png/XP0nItDH38Rt_8fmftRuFj3HGIeYBkAWZYwX9_Vss7EIqoH7wR-tfHGhXRebF3nloBlm88jU2qIEmlYeTzDaJC40lixIoAXYLT7bohGoXdK-8RwYf5zP9XofE0FGCjHmk2-P9GQ0uuJ_Rd7uIHzky8KtdJtsHlwau5yOu7GxbvzKrxtXKcNCKpUAhF8kiyF-VrlB7A2eDdnbIMY7KuwUQoz1mjgzR07nxCg3fAPP0g-6Y_ZwCduUW2NzzSMRaRYELj7OcugpxvwWrieMFpOuvX9iy_EKOwdx4WyUpcAVDQfLJfWeQASjM5AlvHi0)
+
 ## Why I need this?
 
 If you want to get programming quotes from [Programming Quotes API](https://github.com/skolakoda/programming-quotes-api) and programming jokes from [JokeAPI](https://sv443.net/jokeapi/v2) but you don't want to send multipe requests and transform data in frontend instead of backend. GoAggreate is here for you.
@@ -141,6 +143,8 @@ Update `config.yml` jq field from `.` to `add`. Now the response will be
 ```
 
 You may not want all the fields in the endpoints. Try to modify jq field from `.` to `{"quote": (.quote.en), "joke": (.joke.joke)}`
+
+The output will be
 
 ```javascript
 {

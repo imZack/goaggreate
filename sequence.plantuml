@@ -1,0 +1,24 @@
+@startuml
+title GoAggreate
+
+skinparam monochrome true
+skinparam shadowing false
+
+actor "Client"
+
+"Client" -> "GoAggreate": Request
+activate "GoAggreate"
+
+"GoAggreate" -> "GoAggreate": Lookup configuration\n(config.yml)
+
+loop Send requests simultaneously
+  "GoAggreate" -> "Endpoint 1"
+  "GoAggreate" -> "Endpoint 2"
+  "GoAggreate" -> "Endpoint N"
+end
+
+"GoAggreate" -> "GoAggreate": Transofrm responses\n(apply jq filter)
+
+"GoAggreate" -> "Client": Response (transformed data)
+
+@enduml
