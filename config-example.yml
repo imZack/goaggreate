@@ -1,0 +1,15 @@
+apis:
+  programming-jokeandquote:
+    name: programming-jokeandquote
+    jq: '.'
+    endpoints:
+    - name: joke
+      endpoint: https://sv443.net/jokeapi/v2/joke/Programming?type=single
+      ssl_verify: true
+      headers:
+        extraHeaders: 'value'
+    - name: quote
+      endpoint: https://programming-quotes-api.herokuapp.com/quotes/random/lang/en
+      ssl_verify: true
+      headers:
+        extraHeaders: 'value'
